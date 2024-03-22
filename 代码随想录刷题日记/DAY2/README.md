@@ -6,7 +6,7 @@
 
 - 思路：给定一个 **非递减顺序** 排序的整数数组，数组中可能存在正数或者负数。思路是两侧的值的平方分别为正/负数的最大值，使用双指针，从两侧向中间位移。比较两侧值的大小，大的值插入数组。由于结果也需要 非递减顺序 的数组，所以使用 unshift 在数组前面插入值，这样能避免翻转数组。
 
-- 代码
+- 代码：
 
 ```js
 const sortedSquares = (nums, result = []) => {
@@ -31,7 +31,9 @@ const sortedSquares = (nums, result = []) => {
 
 #### 滑动窗口
 
-- 代码
+- 思路：
+
+- 代码：
 
 ```js
 const minSubArrayLen = (target, nums, result = 0) => {
@@ -55,7 +57,9 @@ const minSubArrayLen = (target, nums, result = 0) => {
 
 #### 常规
 
-- 代码
+- 思路：
+
+- 代码：
 
 ```js
 const generateMatrix = (n) => {
