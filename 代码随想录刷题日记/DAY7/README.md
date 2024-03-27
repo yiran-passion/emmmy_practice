@@ -85,7 +85,7 @@
 
 ### 详情
 
-[Leetcode 题目链接](https://leetcode.cn/problems/4sum-ii/description/)
+[Leetcode 题目链接](https://leetcode.cn/problems/3sum/description/)
 
 ### 解法
 
@@ -109,7 +109,7 @@
 
 ### 详情
 
-[Leetcode 题目链接](https://leetcode.cn/problems/4sum-ii/description/)
+[Leetcode 题目链接](https://leetcode.cn/problems/4sum/description/)
 
 ### 解法
 
