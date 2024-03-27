@@ -6,7 +6,7 @@
 
 ### 解法
 
-#### 1. 使用 Map 数据结构
+#### 使用 Map 数据结构
 
 - 思路：
 
@@ -51,7 +51,7 @@
 
 ### 解法
 
-#### 1. 
+#### map 数据结构
 
 - 思路：
 
@@ -89,20 +89,48 @@
 
 ### 解法
 
-#### 1. 
+#### 双指针
 
-- 思路：
+- 思路：这道题用哈希表很麻烦。使用双指针会简单一点
 
 - 代码：
 
   ```js
+  const threeSum = (nums, result = []) => {
+      // 从小到大排序
+      nums = nums.sort((a, b) => a - b)
 
+      for (let i = 0; i < nums.length; i++) {
+          // 如果第一个数大于 0 ，那么一定不存在三个数的和等于 0
+          if (nums[i] > 0) break
+          // 去重
+          if (nums[i] === nums[i - 1]) continue
+          // 定义左/右指针
+          let left = i + 1
+          let right = nums.length - 1
+          while (left < right) {
+              const sum = nums[i] + nums[left] + nums[right]
+              if (sum < 0) {
+                  left++
+              } else if (sum > 0) {
+                  right--
+              } else {
+                  const leftNum = nums[left], rightNum = nums[right]
+                  result.push([nums[i], leftNum, rightNum])
+                  // 这里判断如果重复了，指针再次位移一次进行去重
+                  while (nums[left] === leftNum) left++
+                  while (nums[right] === rightNum) right--
+              }
+          }
+      }
+      return result
+  }
   ```
 
 - 复杂度
 
-  - 时间复杂度：O()
-  - 空间复杂度：O()
+  - 时间复杂度：O(n^2)
+  - 空间复杂度：O(n)
 
 
 ## 18. 四数之和
@@ -113,17 +141,41 @@
 
 ### 解法
 
-#### 1. 
+#### 双指针
 
-- 思路：
+- 思路：思路与三数之和相同，采用双指针，只是外面套一层循环，五数之和就再套一层，以此类推
 
 - 代码：
 
   ```js
-
+  const fourSum = (nums, target, result = []) => {
+      // 数组排序
+      nums.sort((a, b) => a - b)
+      for (let i = 0; i < nums.length; i++) {
+          if (nums[i] === nums[i - 1]) continue
+          for (let j = i + 1; j < nums.length; j++) {
+              if (j - i > 1 && nums[j] === nums[j - 1]) continue
+              let left = j + 1, right = nums.length - 1
+              while (left < right) {
+                  const sum = nums[i] + nums[j] + nums[left] + nums[right]
+                  if (sum < target) {
+                      left++
+                  } else if (sum > target) {
+                      right--
+                  } else {
+                      const leftNum = nums[left], rightNum = nums[right]
+                      result.push([nums[i], nums[j], nums[left], nums[right]])
+                      while (nums[left] === leftNum) left++
+                      while (nums[right] === rightNum) right--
+                  }
+              }
+          }
+      }
+      return result
+  }
   ```
 
 - 复杂度
 
-  - 时间复杂度：O()
-  - 空间复杂度：O()
+  - 时间复杂度：O(n^3)
+  - 空间复杂度：O(n)
