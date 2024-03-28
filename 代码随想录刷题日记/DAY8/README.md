@@ -46,7 +46,19 @@
 - 代码：
 
   ```js
-
+  const reverseStr = (s, k) => {
+      let array = s.split('')
+      
+      for (let i = 0; i < array.length; i += 2 * k) {
+          let left = i, right = i + k - 1
+          while (left < right) {
+              [array[left], array[right]] = [array[right], array[left]]
+              left++
+              right--
+          }
+      }
+      return array.join('')
+  }
   ```
 
 - 复杂度
