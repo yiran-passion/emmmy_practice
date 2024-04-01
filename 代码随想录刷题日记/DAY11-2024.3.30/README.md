@@ -97,7 +97,7 @@
   - 时间复杂度：O(n)
   - 空间复杂度：O(n)
 
-## 
+## 150. 逆波兰表达式求值
 
 ### 详情
 
@@ -105,17 +105,44 @@
 
 ### 解法
 
-#### 
+#### 使用栈
 
 - 思路：
 
 - 代码：
 
   ```js
-
+  const evalRPN = (tokens) => {
+      const stack = []
+      const sup = ['+', '-', '*', '/']
+      for (let i = 0; i < tokens.length; i++) {
+          if (!sup.includes(tokens[i])) {
+              stack.push(Number(tokens[i]))
+              continue
+          }
+          console.log(stack)
+          const n1 = stack.pop()
+          const n2 = stack.pop()
+          switch(tokens[i]) {
+              case '+':
+                  stack.push(n2 + n1)
+                  break;
+              case '-':
+                  stack.push(n2 - n1)
+                  break;
+              case '*':
+                  stack.push(n2 * n1)
+                  break;
+              case '/':
+                  stack.push((n2 / n1 > 0) ? Math.floor(n2 / n1) : Math.ceil(n2 / n1))
+                  break;
+          }
+      }
+      return stack[0]
+  }
   ```
 
 - 复杂度
 
-  - 时间复杂度：O()
-  - 空间复杂度：O()
+  - 时间复杂度：O(n)
+  - 空间复杂度：O(n)
