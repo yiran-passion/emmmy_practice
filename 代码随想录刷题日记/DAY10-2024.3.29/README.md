@@ -65,7 +65,7 @@
 
 ### 详情
 
-[Leetcode 题目链接](https://leetcode.cn/problems/implement-queue-using-stacks/description/)
+[Leetcode 题目链接](https://leetcode.cn/problems/implement-stack-using-queues/)
 
 ### 解法
 
