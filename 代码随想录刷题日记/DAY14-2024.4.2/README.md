@@ -52,7 +52,7 @@
   - 时间复杂度：O(n)
   - 空间复杂度：O(n)
 
-#### 统一递归法
+#### 统一迭代法
 
 - 思路：
 
@@ -111,7 +111,7 @@
   - 时间复杂度：O()
   - 空间复杂度：O()
 
-#### 统一递归法
+#### 统一迭代法
 
 - 思路：
 
@@ -170,24 +170,13 @@
   - 时间复杂度：O()
   - 空间复杂度：O()
 
-#### 统一递归法
+#### 统一迭代法
 
 - 思路：
 
 - 代码：
 
   ```js
-  const preorderTraversal = (root) => {
-      let stack = [root], result = []
-      if (!root) return result
-      while (stack.length) {
-          const treeNode = stack.pop()
-          result.push(treeNode.val)
-          treeNode.right && stack.push(treeNode.right)
-          treeNode.left && stack.push(treeNode.left)
-      }
-      return result
-  }
   ```
 
 - 复杂度
