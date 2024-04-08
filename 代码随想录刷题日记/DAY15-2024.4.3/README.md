@@ -15,24 +15,66 @@
 - 代码：
 
   ```js
-  const levelOrder = (root) => {
-      const result = [], queue = [root]
-      if (!root) return result
-      while (queue.length) {
-          // 因为队列的长度会变，所以提前获取当前层的节点个数
-          const length = queue.length
-          // 当前层的的节点
-          const currentLevel = []
-          for (let i = 0; i < length; i++) {
-              const node = queue.shift()
-              currentLevel.push(node.val)
-              node.left && queue.push(node.left)
-              node.right && queue.push(node.right)
-          }
-          result.push(currentLevel)
-      }
-      return result
-  }
+ const levelOrder = (root, result = []) => {
+     if (!root) return result
+     const queue = [root]
+     while (queue.length) {
+         // 当前层的节点个数
+         const length = queue.length
+         // 用于存储当前层的节点
+         const currentLevel = []
+         // 遍历当前层
+         for (let i = 0; i < length; i++) {
+             const treeNode = queue.shift()
+             currentLevel.push(treeNode.val)
+             treeNode.left && queue.push(treeNode.left)
+             treeNode.right && queue.push(treeNode.right)
+         }
+         result.push(currentLevel)
+     }
+     return result
+ }
+  ```
+
+- 复杂度
+
+  - 时间复杂度：O(n)
+  - 空间复杂度：O(n)
+
+## 429. N 叉树的层序遍历
+
+### 详情
+
+[Leetcode 题目链接](https://leetcode.cn/problems/n-ary-tree-level-order-traversal/description/)
+
+### 解法
+
+#### 使用队列
+
+- 思路：
+
+- 代码：
+
+  ```js
+ const levelOrder = (root, result = []) => {
+     if (!root) return result
+     const queue = [root]
+     while (queue.length) {
+         // 当前层的节点个数
+         const length = queue.length
+         // 用于存储当前层的节点
+         const currentLevel = []
+         // 遍历当前层
+         for (let i = 0; i < length; i++) {
+             const treeNode = queue.shift()
+             currentLevel.push(treeNode.val)
+             treeNode.left && queue.push(treeNode.left)
+             treeNode.right && queue.push(treeNode.right)
+         }
+         result.push(currentLevel)
+     }
+     return result
+ }
   ```
 
 - 复杂度
@@ -65,6 +107,38 @@
       root.right = invertTree(treeLeft)
       return root
   }
+  ```
+
+- 复杂度
+
+  - 时间复杂度：O(n)
+  - 空间复杂度：O(n)
+
+#### 层序遍历
+
+- 思路：
+
+- 代码：
+
+  ```js
+ const invertTree = (root) => {
+     if (!root) return root
+     const queue = [root]
+     while (queue.length) {
+         const length = queue.length
+         for (let i = 0; i < length; i++) {
+             let treeNode = queue.shift()
+             // 翻转
+             const treeNodeLeft = treeNode.left
+             treeNode.left = treeNode.right
+             treeNode.right = treeNodeLeft
+             // 子节点
+             treeNode.left && queue.push(treeNode.left)
+             treeNode.right && queue.push(treeNode.right)
+         }
+     }
+     return root
+ }
   ```
 
 - 复杂度
