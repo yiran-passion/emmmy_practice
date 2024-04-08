@@ -67,6 +67,64 @@
   - 时间复杂度：O()
   - 空间复杂度：O()
 
+## 94. 二叉树的中序遍历
+
+### 详情
+
+[Leetcode 题目链接]()
+
+### 解法
+
+#### 递归
+
+- 思路：
+
+- 代码：
+
+  ```js
+  const inorderTraversal = (root, result = []) => {
+      if (!root) return result
+      root.left && preorderTraversal(root.left, result)
+      result.push(root.val)
+      root.right && preorderTraversal(root.right, result)
+      return result
+  };
+  ```
+
+- 复杂度
+
+  - 时间复杂度：O()
+  - 空间复杂度：O()
+
+#### 迭代
+
+- 思路：
+
+- 代码：
+
+  ```js
+
+  ```
+
+- 复杂度
+
+  - 时间复杂度：O()
+  - 空间复杂度：O()
+
+#### 统一迭代法
+
+- 思路：
+
+- 代码：
+
+  ```js
+  ```
+
+- 复杂度
+
+  - 时间复杂度：O()
+  - 空间复杂度：O()
+
 ## 145. 二叉树的后序遍历
 
 ### 详情
@@ -82,7 +140,7 @@
 - 代码：
 
   ```js
-  const preorderTraversal = (root, result = []) => {
+  const postorderTraversal = (root, result = []) => {
       if (!root) return result
       root.left && preorderTraversal(root.left, result)
       root.right && preorderTraversal(root.right, result)
@@ -103,72 +161,23 @@
 - 代码：
 
   ```js
-
-  ```
-
-- 复杂度
-
-  - 时间复杂度：O()
-  - 空间复杂度：O()
-
-#### 统一迭代法
-
-- 思路：
-
-- 代码：
-
-  ```js
-
-  ```
-
-- 复杂度
-
-  - 时间复杂度：O()
-  - 空间复杂度：O()
-
-## 94. 二叉树的中序遍历
-
-### 详情
-
-[Leetcode 题目链接]()
-
-### 解法
-
-#### 递归
-
-- 思路：
-
-- 代码：
-
-  ```js
-  const preorderTraversal = (root, result = []) => {
+  const postorderTraversal = function(root, result = []) {
       if (!root) return result
-      root.left && preorderTraversal(root.left, result)
-      result.push(root.val)
-      root.right && preorderTraversal(root.right, result)
-      return result
-  };
+      const stack = [root]
+      while (stack.length) {
+          const treeNode = stack.pop()
+          result.push(treeNode.val)
+          treeNode.left && stack.push(treeNode.left)
+          treeNode.right && stack.push(treeNode.right)
+      }
+      return result.reverse()
+  }
   ```
 
 - 复杂度
 
-  - 时间复杂度：O()
-  - 空间复杂度：O()
-
-#### 迭代
-
-- 思路：
-
-- 代码：
-
-  ```js
-
-  ```
-
-- 复杂度
-
-  - 时间复杂度：O()
-  - 空间复杂度：O()
+  - 时间复杂度：O(n)
+  - 空间复杂度：O(n)
 
 #### 统一迭代法
 
@@ -177,6 +186,7 @@
 - 代码：
 
   ```js
+
   ```
 
 - 复杂度
