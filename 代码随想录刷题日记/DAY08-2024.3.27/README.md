@@ -2,11 +2,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/reverse-string/description/)
 
 ### 解法
 
-#### 双指针
+#### 一、双指针
 
 - 思路：
 
@@ -35,11 +37,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/reverse-string-ii/description/)
 
 ### 解法
 
-#### 双指针
+#### 一、双指针
 
 - 思路：
 
@@ -69,11 +73,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/reverse-string-ii/description/)
 
 ### 解法
 
-#### 
+#### 一、
 
 - 思路：
 
@@ -92,11 +98,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [卡码网 题目链接]()
 
 ### 解法
 
-#### 
+#### 一、
 
 - 思路：
 
@@ -115,11 +123,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [卡码网 题目链接]()
 
 ### 解法
 
-#### 
+#### 一、
 
 - 思路：
 

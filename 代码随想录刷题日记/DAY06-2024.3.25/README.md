@@ -2,11 +2,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/valid-anagram/description/)
 
 ### 解法
 
-#### 使用 Map 数据结构
+#### 一、使用 Map 数据结构
 
 - 思路：
 
@@ -44,9 +46,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/intersection-of-two-arrays/)
 
 ### 解法
+
+#### 一、使用 Set 数据结构
 
 - 代码：
 
@@ -67,9 +73,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/happy-number/description/)
 
 ### 解法
+
+#### 一、使用 Set 数据结构
 
 - 代码：
 
@@ -97,9 +107,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/two-sum/description/)
 
 ### 解法
+
+#### 一、使用 Set 数据结构
 
 - 代码：
 
