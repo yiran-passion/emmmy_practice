@@ -2,11 +2,13 @@
 
 ### 详情
 
-[题目链接](https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE)
+[代码随想录链接](https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html#%E7%AE%97%E6%B3%95%E5%85%AC%E5%BC%80%E8%AF%BE)
+
+[Leetcode 题目链接]()
 
 ### 解法
 
-#### 常规解法
+#### 一、常规解法
 
 - 思路：创建一个用于“遍历”链表的辅助链表，操作辅助链表，在辅助链表上进行元素删除。
 
@@ -35,11 +37,13 @@ const removeElements = (head, val) => {
 
 ### 详情
 
-[题目链接](https://programmercarl.com/0206.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8.html)
+[代码随想录链接](https://programmercarl.com/0206.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8.html)
+
+[Leetcode 题目链接]()
 
 ### 解法
 
-#### 常规解法
+#### 一、常规解法
 
 - 思路：
 

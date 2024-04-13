@@ -1,8 +1,14 @@
 ## 977.有序数组的平方
 
+### 详情
+
+[代码随想录链接]()
+
+[Leetcode 题目链接]()
+
 ### 解法
 
-#### 1. 双指针
+#### 一、双指针
 
 - 思路：给定一个 **非递减顺序** 排序的整数数组，数组中可能存在正数或者负数。思路是两侧的值的平方分别为正/负数的最大值，使用双指针，从两侧向中间位移。比较两侧值的大小，大的值插入数组。由于结果也需要 非递减顺序 的数组，所以使用 unshift 在数组前面插入值，这样能避免翻转数组。
 
@@ -15,10 +21,10 @@ const sortedSquares = (nums, result = []) => {
     while (left <= right) {
         if (nums[left] * nums[left] < nums[right] * nums[right]) {
             result.unshift(nums[right] * nums[right])
-            right --
+            right--
         } else {
             result.unshift(nums[left] * nums[left])
-            left ++
+            left++
         }
     }
     return result
@@ -27,9 +33,15 @@ const sortedSquares = (nums, result = []) => {
 
 ## 209.长度最小的子数组
 
+### 详情
+
+[代码随想录链接]()
+
+[Leetcode 题目链接]()
+
 ### 解法
 
-#### 滑动窗口
+#### 一、滑动窗口
 
 - 思路：
 
@@ -53,9 +65,15 @@ const minSubArrayLen = (target, nums, result = 0) => {
 
 ## 59.螺旋矩阵II
 
+### 详情
+
+[代码随想录链接]()
+
+[Leetcode 题目链接]()
+
 ### 解法
 
-#### 常规
+#### 一、常规解法
 
 - 思路：
 

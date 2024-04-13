@@ -2,6 +2,8 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/maximum-depth-of-binary-tree/description/)
 
 ### 解法

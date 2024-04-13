@@ -2,11 +2,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/implement-queue-using-stacks/description/)
 
 ### 解法
 
-#### 两个栈实现
+#### 一、两个栈实现
 
 - 思路：
 
@@ -65,11 +67,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/implement-stack-using-queues/)
 
 ### 解法
 
-#### 一个队列实现
+#### 一、一个队列实现
 
 - 思路：
 

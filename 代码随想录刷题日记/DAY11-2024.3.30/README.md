@@ -2,11 +2,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/valid-parentheses/description/)
 
 ### 解法
 
-#### 使用栈
+#### 一、使用栈
 
 - 思路：
 
@@ -41,7 +43,7 @@
   - 空间复杂度：O(n)
 
 
-#### 使用 js 的 api 神奇思路（看到 leetcode 学习到的）
+#### 二、使用 js 的 api 神奇思路（看到 leetcode 学习到的）
 
 - 思路：
 
@@ -67,11 +69,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/description/)
 
 ### 解法
 
-#### 使用栈
+#### 一、使用栈
 
 - 思路：
 
@@ -101,11 +105,13 @@
 
 ### 详情
 
+[代码随想录链接]()
+
 [Leetcode 题目链接](https://leetcode.cn/problems/evaluate-reverse-polish-notation/description/)
 
 ### 解法
 
-#### 使用栈
+#### 一、使用栈
 
 - 思路：
 
@@ -120,7 +126,6 @@
               stack.push(Number(tokens[i]))
               continue
           }
-          console.log(stack)
           const n1 = stack.pop()
           const n2 = stack.pop()
           switch(tokens[i]) {
