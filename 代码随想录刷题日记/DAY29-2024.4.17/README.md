@@ -8,14 +8,29 @@
 
 ### 解法
 
-####
+#### 回溯（使用 set 去重）
 
 - 思路：
 
 - 代码：
 
   ```js
-
+  const findSubsequences = (nums, result = []) => {
+      const set = new Set()
+      const backTracking = (start, path) => {
+          if (path.length >= 2) {
+              set.add(JSON.stringify(path))
+          }
+          for (let i = start; i < nums.length; i++) {
+              if (nums[i] < path[path.length - 1]) continue
+              path.push(nums[i])
+              backTracking(i + 1, path)
+              path.pop()
+          }
+      }
+      backTracking(0, [])
+      return Array.from(set).map(item => JSON.parse(item))
+  }
   ```
 
 - 复杂度
