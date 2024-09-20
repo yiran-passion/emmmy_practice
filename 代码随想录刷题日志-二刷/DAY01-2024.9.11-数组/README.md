@@ -13,7 +13,7 @@
 - 代码：
 
   ```js
-  var search = function(nums, target) {
+  const search = function(nums, target) {
     let left = 0, right = nums.length - 1
     while (left <= right) {
       const mid = Math.floor((left + right) / 2)
@@ -50,7 +50,7 @@
 - 代码：
 
   ```js
-  var removeElement = function(nums, val) {
+  const removeElement = function(nums, val) {
     let slowIndex = 0
     for (let fastIndex = 0, len = nums.length; fastIndex < len; fastIndex ++) {
       if (nums[fastIndex] !== val) {
@@ -83,7 +83,7 @@
 - 代码：
 
   ```js
-  var sortedSquares = function(nums, result = []) {
+  const sortedSquares = function(nums, result = []) {
     let left = 0, right = nums.length - 1
     while (left <= right) {
       if (Math.pow(nums[left], 2) < Math.pow(nums[right], 2)) {

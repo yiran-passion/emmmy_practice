@@ -13,7 +13,7 @@
 - 代码：
 
   ```js
-  var minSubArrayLen = function(target, nums, result = 0) {
+  const minSubArrayLen = function(target, nums, result = 0) {
     let sum = 0, slowIndex = 0
     for (let fastIndex = 0, len = nums.length; fastIndex < len; fastIndex++) {
       sum += nums[fastIndex]
@@ -48,7 +48,7 @@
 - 代码：
 
   ```js
-  var generateMatrix = function(n) {
+  const generateMatrix = function(n) {
     const result = new Array(n).fill(null).map(item => new Array(n).fill(null))
     let startX = 0, startY = 0, loop = Math.floor(n / 2), sum = 0
     while (loop--) {

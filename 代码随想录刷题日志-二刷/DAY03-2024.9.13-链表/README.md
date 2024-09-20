@@ -13,7 +13,7 @@
 - 代码：
 
   ```js
-  var removeElements = function(head, val) {
+  const removeElements = function(head, val) {
     if (!head) return null
     let result = new ListNode(null, head)
     let sup = result
@@ -73,7 +73,7 @@
 - 代码：
 
   ```js
-  var reverseList = function(head) {
+  const reverseList = function(head) {
     if (!head) return null
     let result = null, current = head, sup = null
     while (current) {
